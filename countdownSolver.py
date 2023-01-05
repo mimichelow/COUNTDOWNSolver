@@ -3,7 +3,7 @@ from Trie import Trie
 #countdownSolver finds all the word that can be made using a 9 letter long string, so as to work as a solver for the
 # gameshow COUNTDOWN, it does this by generating a Trie from all the permutations, and iterating
 #the whole dictionary through it
-def countdownSolver(letters):
+ def countdownSolver(letters):
     def permute(word):
         if len(word) == 1:
             return [word]
@@ -27,3 +27,4 @@ def countdownSolver(letters):
                 answer.append(line)
     #The answer is returned with the highest scoring words first
     return(reversed(sorted(answer,key=lambda x:len(x))))
+
